@@ -4,7 +4,7 @@
    
 Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), datatables, jQuery + plugins, Java 8 Stream and Time API и хранением в базах данных Postgresql и HSQLDB.
 
-![enter image description here](https://user-images.githubusercontent.com/13649199/27433714-8294e6fe-575e-11e7-9c41-7f6e16c5ebe5.jpg)
+<img src="https://user-images.githubusercontent.com/13649199/27433714-8294e6fe-575e-11e7-9c41-7f6e16c5ebe5.jpg" height="400" />
 
 ```diff
 - Когда вы слышите что-то, вы забываете это.
@@ -26,4 +26,10 @@ Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), 
 ! Все видео обязательны к просмотру
 ```
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы.
-<a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFY1ZDNXRCd1NCTG8/edit"><img src="first.png" alt="Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы."></a>
+<a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFY1ZDNXRCd1NCTG8/edit"><img src="first.png" height="200" alt="Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы."></a>
+***
+* [Слайды презентации](https://goo.gl/XNVOj4)
+* [Java Tools and Technologies Landscape Report 2016](http://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/)
+* [Java in 2017 Survey](http://www.baeldung.com/java-in-2017)
+* [Из юниоров в разработчики: получаем первую работу](https://habrahabr.ru/post/308104/)
+***
