@@ -1,4 +1,4 @@
-# <center>Java Enterprise Online Project</center>  
+## Java Enterprise Online Project  
 
 Разработка полнофункционального Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей с использованием наиболее популярных инструментов и технологий Java:  
    
@@ -15,13 +15,13 @@ Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), 
 Старинная китайская поговорка
 ```
 
-### [Описание и план проекта](https://github.com/JavaOPs/topjava/blob/master/description.md)
+## [Описание и план проекта](https://github.com/JavaOPs/topjava/blob/master/description.md)
 ### [Демо разрабатываемого приложения](http://topjava.herokuapp.com/)
 ### [Изменения проекта (Release Notes)](https://github.com/JavaOPs/topjava/blob/master/ReleaseNotes.md)
 ### [Требования к участникам, Wiki](https://github.com/JavaOPs/topjava/wiki)
 ### [Составление резюме, подготовка к интервью, поиск работы](https://github.com/JavaOPs/topjava/blob/master/cv.md)
 
-# <center>ВВОДНОЕ ЗАНЯТИЕ</center>  
+## ВВОДНОЕ ЗАНЯТИЕ 
 ```diff
 ! Все видео обязательны к просмотру
 ```
