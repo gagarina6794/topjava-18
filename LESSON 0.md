@@ -32,7 +32,7 @@ Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), 
 * [Java in 2017 Survey](http://www.baeldung.com/java-in-2017)
 * [Из юниоров в разработчики: получаем первую работу](https://habrahabr.ru/post/308104/)
 ***
-####Spring Pet-Clinic
+#### Spring Pet-Clinic
 * [Spring PetClinic Sample Application](https://github.com/spring-projects/spring-petclinic)
 * [Presentation](https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application)
 ***
