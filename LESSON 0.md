@@ -26,7 +26,4 @@ Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), 
 ! Все видео обязательны к просмотру
 ```
 
-[![Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы.](first.png)](https://drive.google.com/file/d/0B9Ye2auQ_NsFY1ZDNXRCd1NCTG8/edit)
-
-
-  <a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFY1ZDNXRCd1NCTG8/edit"><img src="first.png" alt="Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы." target="_blank"></a>
+<a href="https://drive.google.com/file/d/0B9Ye2auQ_NsFY1ZDNXRCd1NCTG8/edit" target="_blank"><img src="first.png" alt="Осваиваем Java Enterprise. Трудоустройство. Ответы на вопросы."></a>
