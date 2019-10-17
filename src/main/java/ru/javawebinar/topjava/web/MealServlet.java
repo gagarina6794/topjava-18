@@ -75,34 +75,30 @@ public class MealServlet extends HttpServlet {
                 request.setAttribute("meal", meal);
                 request.getRequestDispatcher("/mealForm.jsp").forward(request, response);
                 break;
+            case "filter":
+                log.info("getAllFiltered");
+                String startDate = request.getParameter("startDate");
+                String endDate = request.getParameter("endDate");
+                String startTime = request.getParameter("startTime");
+                String endTime = request.getParameter("endTime");
+                final DateTimeParser dateTimeParser = DateTimeParser.parseStringToDate(startDate, endDate, startTime, endTime);
+                List<MealTo> filteredMealTos = mealRestController.getAllFiltered(
+                        dateTimeParser.getStartDate(),
+                        dateTimeParser.getEndDate(),
+                        dateTimeParser.getStartTime(),
+                        dateTimeParser.getEndTime());
+                request.setAttribute("startDate", startDate);
+                request.setAttribute("endDate", endDate);
+                request.setAttribute("startTime", startTime);
+                request.setAttribute("endDate", endTime);
+                request.setAttribute("meals", filteredMealTos);
+                request.getRequestDispatcher("/meals.jsp").forward(request, response);
+                break;
             case "all":
             default:
-                String filter = request.getParameter("filter");
-                List<MealTo> filteredMealTos;
-
-                if (filter == null) {
-                    log.info("getAll");
-                    filteredMealTos = mealRestController.getAll();
-                } else {
-                    log.info("getAllFiltered");
-                    String startDate = request.getParameter("startDate");
-                    String endDate = request.getParameter("endDate");
-                    String startTime = request.getParameter("startTime");
-                    String endTime = request.getParameter("endTime");
-                    final DateTimeParser dateTimeParser = DateTimeParser.parseStringToDate(startDate, endDate, startTime, endTime);
-
-                    filteredMealTos = mealRestController.getAllFiltered(
-                            dateTimeParser.getStartDate(),
-                            dateTimeParser.getEndDate(),
-                            dateTimeParser.getStartTime(),
-                            dateTimeParser.getEndTime());
-
-                    request.setAttribute("startDate", startDate);
-                    request.setAttribute("endDate", endDate);
-                    request.setAttribute("startTime", startTime);
-                    request.setAttribute("endTime", endTime);
-                }
-                request.setAttribute("meals", filteredMealTos);
+                log.info("getAll");
+                List<MealTo> mealTos = mealRestController.getAll();
+                request.setAttribute("meals", mealTos);
                 request.getRequestDispatcher("/meals.jsp").forward(request, response);
         }
     }
