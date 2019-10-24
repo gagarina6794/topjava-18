@@ -2,6 +2,10 @@ Java Enterprise Online Project
 ===============================
 Разработка полнофункционального Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей с использованием наиболее популярных инструментов и технологий Java: Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), datatables, jQuery + plugins, Java 8 Stream and Time API и хранением в базах данных Postgresql и HSQLDB.
 
+<a href="https://app.codacy.com/manual/gagarina6794/topjava-18" rel="nofollow"><img src="https://camo.githubusercontent.com/0d9f0e554b9a86ce39bacc48f83c28646e657326/68747470733a2f2f6170692e636f646163792e636f6d2f70726f6a6563742f62616467652f47726164652f3431366435663630373566313437303838323335383135666337623139663861" alt="Codacy Badge" data-canonical-src="https://api.codacy.com/project/badge/Grade/823dca8da934476ba06c8cb41dba5c31" style="max-width:100%;"></a>
+<a href="https://travis-ci.org/gagarina6794/topjava-18" rel="nofollow"><img src="https://camo.githubusercontent.com/36aef9dad8478b5ff55a66261aabc1cfbf4b1880/68747470733a2f2f7472617669732d63692e6f72672f4a617661576562696e61722f746f706a6176612e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/gagarina6794/topjava-18.svg?branch=master" style="max-width:100%;"></a>
+
+
 ![topjava_structure](https://user-images.githubusercontent.com/13649199/27433714-8294e6fe-575e-11e7-9c41-7f6e16c5ebe5.jpg)
 
     Когда вы слышите что-то, вы забываете это.
