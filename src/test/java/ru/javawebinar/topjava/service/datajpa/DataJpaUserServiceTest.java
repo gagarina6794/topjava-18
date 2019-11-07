@@ -1,16 +1,13 @@
 package ru.javawebinar.topjava.service.datajpa;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.test.context.ActiveProfiles;
 import ru.javawebinar.topjava.Profiles;
-import ru.javawebinar.topjava.TimeWatcher;
 import ru.javawebinar.topjava.UserTestData;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.service.AbstractUserServiceTest;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
-import java.lang.invoke.MethodHandles;
 import java.util.Collections;
 
 import static ru.javawebinar.topjava.MealTestData.MEALS;
@@ -20,11 +17,6 @@ import static ru.javawebinar.topjava.UserTestData.NOT_EXIST_ID;
 
 @ActiveProfiles(Profiles.DATAJPA)
 public class DataJpaUserServiceTest extends AbstractUserServiceTest {
-    @BeforeClass
-    public static void beforeClassFunction() {
-        TimeWatcher.initReport(MethodHandles.lookup().lookupClass().getSimpleName());
-    }
-
     @Test
     @Override
     public void getWithMeals() {
