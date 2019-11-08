@@ -1,10 +1,13 @@
 package ru.javawebinar.topjava.service;
 
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.rules.ExpectedException;
 import org.junit.rules.ExternalResource;
 import org.junit.rules.Stopwatch;
+import org.junit.rules.TestRule;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.springframework.test.context.ActiveProfiles;
@@ -27,12 +30,14 @@ import static org.slf4j.LoggerFactory.getLogger;
 public abstract class AbstractServiceTest {
     protected static final Logger log = getLogger("result");
 
-    @ClassRule
-    public static ExternalResource summary = TimingRules.SUMMARY;
-
     @Rule
-    public Stopwatch stopwatch = TimingRules.STOPWATCH;
+    public TestRule timing = new TimingRules();
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
+
+    @AfterClass
+    public static void printReport() {
+        TimingRules.getReport();
+    }
 }
