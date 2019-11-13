@@ -1,0 +1,18 @@
+<resources>
+    <string-array name="pets">
+        <item>Кошка</item>
+        <item>Собака</item>
+        <item>Ктулху</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>имени</item>
+        <item>уровню</item>
+    </string-array>
+
+    <string-array name="grouping">
+        <item>питомцам</item>
+        <item>событиям</item>
+        <item>дате</item>
+    </string-array>
+</resources>
