@@ -16,7 +16,7 @@
     <string name="change_name">Змінити ім'я</string>
     <string name="delete_pet">Видалення домашніх улюбленців</string>
     <string name="back">назад</string>
-    <string name="ok">ТАК</string>
+    <string name="ok">Так</string>
     <string name="cancel">Відміна</string>
     <string name="name">Ім'я</string>
     <string name="pets_input">Виберіть домашнього улюбленця:</string>
@@ -35,11 +35,11 @@
     <string name="change_name_pet">Зміна імені домашнього улюбленця</string>
     <string name="delete_this_pets">Ви дійсно бажаєте вилучити обраних домашніх улюбленців?</string>
     <string name="delete">Вилучити</string>
-    <string name="lvl_up">рівень піднявся</string>
-    <string name="arrow">лінія стану</string>
+    <string name="lvl_up">lvl_up</string>
+    <string name="arrow">рядок стану</string>
     <string name="settings">налаштування</string>
     <string name="select_pets">Потрібно вибрати домашніх улюбленців</string>
-    <string name="shit">гівно</string>
+    <string name="shit">какашки</string>
     <string name="create">народився</string>
     <string name="is_hungry">зголоднів!</string>
     <string name="wants_to_walk">хоче гуляти!</string>
@@ -75,7 +75,7 @@
     <string name="was_sleep">Заснув</string>
     <string name="was_cure">Вилікувався</string>
     <string name="group_by">Групувати по</string>
-    <string name="clear_history">Ви дійсно бажаєте очистити всю історію?</string>
+    <string name="clear_history">Ви дійсно бажаєте очистити історію?</string>
     <string name="delete_all_history">Історія очищена!</string>
 
     <plurals name="was_delete_plurals">

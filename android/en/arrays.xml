@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="pets">
-        <item>Кошка</item>
-        <item>Собака</item>
-        <item>Ктулху</item>
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Cthulhu</item>
     </string-array>
 
     <string-array name="sort">
-        <item>имени</item>
-        <item>уровню</item>
+        <item>name</item>
+        <item>level</item>
     </string-array>
 
     <string-array name="grouping">
-        <item>питомцам</item>
-        <item>событиям</item>
-        <item>дате</item>
+        <item>pets</item>
+        <item>events</item>
+        <item>date</item>
     </string-array>
 </resources>
