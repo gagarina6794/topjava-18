@@ -15,10 +15,10 @@
     <string name="change_pet">Сменить питомца</string>
     <string name="change_name">Сменить имя</string>
     <string name="delete_pet">Удаление питомцев</string>
-    <string name="back">back</string>
-    <string name="ok">ОК</string>
+    <string name="back">назад</string>
+    <string name="ok">ДА</string>
     <string name="cancel">Отмена</string>
-    <string name="name">Name</string>
+    <string name="name">Имя</string>
     <string name="pets_input">Выберите питомца:</string>
     <string name="create_pet">Создание питомца</string>
     <string name="input_name">Введите имя:</string>
@@ -28,8 +28,8 @@
     <string name="error_not_correct_name">Некорректное имя!</string>
     <string name="error_min_characters">Имя не должно быть короче 2 символов</string>
     <string name="sort_on">Сортировка по</string>
-    <string name="pet_icon">pet icon</string>
-    <string name="level_number">%d lvl</string>
+    <string name="pet_icon">изображение питомца</string>
+    <string name="level_number">%d уровень</string>
     <string name="this_name"><![CDATA[Текущее имя: <b>%s</b>]]></string>
     <string name="input_new_name">Введите новое имя:</string>
     <string name="change_name_pet">Смена имени питомца</string>
