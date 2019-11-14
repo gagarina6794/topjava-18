@@ -14,6 +14,6 @@
     <string-array name="grouping">
         <item>домашніх улюбленцях</item>
         <item>подіях</item>
-        <item>даті</item>
+        <item>датах</item>
     </string-array>
 </resources>
