@@ -1,0 +1,6 @@
+<resources>
+<string name="error_download">Error of loading video</string>
+<string name="error_video">Video error</string>
+<string name="add_exp">Received %d experience</string>
+<string name="error_no_fill">Lack of ad inventory</string>
+</resources>

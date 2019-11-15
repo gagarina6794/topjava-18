@@ -35,7 +35,7 @@
     <string name="change_name_pet">Смена имени питомца</string>
     <string name="delete_this_pets">Вы действительно хотите удалить выбранных питомцев?</string>
     <string name="delete">Удалить</string>
-    <string name="lvl_up">lvl_up</string>
+    <string name="lvl_up">Уровень повысился</string>
     <string name="arrow">строка состояния</string>
     <string name="settings">установки</string>
     <string name="select_pets">Нужно выбрать питомцев</string>
