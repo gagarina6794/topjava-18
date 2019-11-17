@@ -41,7 +41,7 @@ public class JspMealController extends AbstractMealController {
         return "redirect:" + PATH;
     }
 
-    @GetMapping("/mealForm")
+    @GetMapping("/update")
     public String getForUpdate(HttpServletRequest request) {
         int id = getId(request);
         request.setAttribute("meal", super.get(id));
