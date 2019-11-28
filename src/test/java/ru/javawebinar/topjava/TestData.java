@@ -7,10 +7,8 @@ import ru.javawebinar.topjava.model.User;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static ru.javawebinar.topjava.MealTestData.MEAL_IGNORE;
 import static ru.javawebinar.topjava.TestUtil.readFromJsonMvcResult;
 import static ru.javawebinar.topjava.TestUtil.readListFromJsonMvcResult;
-import static ru.javawebinar.topjava.UserTestData.USER_IGNORE;
 
 public class TestData {
 
@@ -27,20 +25,24 @@ public class TestData {
         assertThat(actual).usingElementComparatorIgnoringFields(getIgnoreFields(actual.iterator().next())).isEqualTo(expected);
     }
 
-    @SafeVarargs
-    public static <T> ResultMatcher contentJson(Class<T> tClass, T... expected) {
-        return result -> assertMatch(readListFromJsonMvcResult(result, tClass), List.of(expected));
-    }
-
     public static <T> ResultMatcher contentJson(Class<T> tClass, T expected) {
         return result -> assertMatch(readFromJsonMvcResult(result, tClass), expected);
     }
 
+    @SafeVarargs
+    public static <T> ResultMatcher contentJson(Class<T> tClass, T... expected) {
+        return contentJson(tClass, List.of(expected));
+    }
+
+    public static <T> ResultMatcher contentJson(Class<T> tClass, Iterable<T> expected) {
+        return result -> assertMatch(readListFromJsonMvcResult(result, tClass), expected);
+    }
+
     private static <T> String[] getIgnoreFields(T object) {
         if (object instanceof User) {
-            return USER_IGNORE;
+            return UserTestData.IGNORE_FIELDS;
         } else if (object instanceof Meal) {
-            return MEAL_IGNORE;
+            return MealTestData.IGNORE_FIELDS;
         } else {
             return new String[0];
         }

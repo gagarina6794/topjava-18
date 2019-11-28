@@ -8,7 +8,6 @@ import ru.javawebinar.topjava.service.AbstractJpaUserServiceTest;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static ru.javawebinar.topjava.MealTestData.MEAL_IGNORE;
 import static ru.javawebinar.topjava.Profiles.DATAJPA;
 import static ru.javawebinar.topjava.UserTestData.*;
 import static ru.javawebinar.topjava.TestData.assertMatch;
