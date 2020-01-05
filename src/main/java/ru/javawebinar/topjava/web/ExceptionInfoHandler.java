@@ -36,8 +36,8 @@ public class ExceptionInfoHandler {
 
     @ResponseStatus(value = HttpStatus.CONFLICT)  // 409
     @ExceptionHandler(DataIntegrityViolationException.class)
-    public ErrorInfo conflict(HttpServletRequest req, DataIntegrityViolationException e) {
-        return logAndGetErrorInfo(req, e, true, DATA_ERROR);
+    public ErrorInfo conflict(HttpServletRequest req, DataIntegrityViolationException exception) {
+        return logAndGetErrorInfo(req, exception, true, DATA_ERROR);
     }
 
     @ResponseStatus(value = HttpStatus.UNPROCESSABLE_ENTITY)  // 422

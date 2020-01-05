@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.web.meal;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -46,14 +47,22 @@ public class MealRestController extends AbstractMealController {
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void update(@Valid @RequestBody Meal meal, BindingResult result, @PathVariable int id) {
         ValidationUtil.getErrorResponse(result);
-        super.update(meal, id);
+        try {
+            super.update(meal, id);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityViolationException("Duplication data error, create meal with another time");
+        }
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Meal> createWithLocation(@Valid @RequestBody Meal meal, BindingResult result) {
         ValidationUtil.getErrorResponse(result);
-        Meal created = super.create(meal);
-
+        Meal created;
+        try {
+            created = super.create(meal);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityViolationException("Duplication data error, create meal with another time");
+        }
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path(REST_URL + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
