@@ -5,12 +5,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.MealTestData;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.service.MealService;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 import ru.javawebinar.topjava.web.AbstractControllerTest;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.time.Month;
+
+import static java.time.LocalDateTime.of;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -27,6 +34,9 @@ class MealRestControllerTest extends AbstractControllerTest {
 
     @Autowired
     private MealService mealService;
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     MealRestControllerTest() {
         super(MealRestController.REST_URL);
@@ -78,6 +88,15 @@ class MealRestControllerTest extends AbstractControllerTest {
     }
 
     @Test
+    @Transactional(propagation = Propagation.NEVER)
+    void updateWithLocationDuplicateTime() throws Exception {
+        Meal updated = MealTestData.getUpdated();
+        updated.setDateTime(of(2015, Month.MAY, 30, 13, 0));
+        perform(doPut(MEAL1_ID).jsonBody(updated).basicAuth(USER))
+                .andExpect(status().isConflict());
+    }
+
+    @Test
     void updateNotValidData() throws Exception {
         Meal updated = MealTestData.getUpdated();
         updated.setDateTime(null);
@@ -97,6 +116,14 @@ class MealRestControllerTest extends AbstractControllerTest {
         newMeal.setId(newId);
         MEAL_MATCHERS.assertMatch(created, newMeal);
         MEAL_MATCHERS.assertMatch(mealService.get(newId, USER_ID), newMeal);
+    }
+
+    @Test
+    @Transactional(propagation = Propagation.NEVER)
+    void createWithLocationDuplicateTime() throws Exception {
+        Meal newMeal = MealTestData.getNew();
+        newMeal.setDateTime(of(2015, Month.MAY, 30, 10, 0));
+        perform(doPost().jsonBody(newMeal).basicAuth(USER)).andExpect(status().isConflict());
     }
 
     @Test
